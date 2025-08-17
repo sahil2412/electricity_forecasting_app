@@ -24,6 +24,14 @@ uploaded_file = st.file_uploader("Upload CSV dataset", type=["csv"])
 if uploaded_file:
     try:
         df = load_data(uploaded_file)
+        # Standardize column names so downstream code works
+        if "PJME_MW" in df.columns:
+            df = df.rename(columns={"PJME_MW": "Energy_kWh"})
+        elif "AEP_MW" in df.columns:
+            df = df.rename(columns={"AEP_MW": "Energy_kWh"})
+        elif df.shape[1] >= 2:
+            df = df.rename(columns={df.columns[1]: "Energy_kWh"})
+         # fallback: rename 2nd column
         st.subheader("Data Preview")
         st.write(df.head())
 
