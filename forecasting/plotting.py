@@ -1,5 +1,5 @@
 import plotly.graph_objs as go
-from fbprophet.plot import plot_plotly
+from prophet.plot import plot_plotly
 
 
 def plot_raw_data(df):
