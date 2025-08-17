@@ -1,13 +1,14 @@
 # Core libraries
-streamlit
+prophet==1.1.5
+numpy<2.0
+cmdstanpy
 pandas
-numpy
+streamlit
 matplotlib
 seaborn
 plotly
 
-# Prophet (time series forecasting)
-prophet==1.1.5
+
 
 # Other utilities
 pillow
