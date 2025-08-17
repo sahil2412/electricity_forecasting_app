@@ -1,0 +1,14 @@
+# Core libraries
+streamlit
+pandas
+numpy
+matplotlib
+seaborn
+plotly
+
+# Prophet (time series forecasting)
+prophet==1.1.5
+
+# Other utilities
+pillow
+xlrd<2.0  # For Excel support if needed
