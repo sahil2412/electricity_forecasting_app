@@ -68,9 +68,9 @@ if uploaded_file:
 
             st.subheader("💰 Cost Estimation")
             if option in [0, 1]:
-                st.write(f"Estimated cost: RM {cost:.2f}")
+                st.write(f"Estimated cost: $ {cost:.2f}")
             else:
-                st.write(f"Estimated cost (including max demand): RM {tcost:.2f}")
+                st.write(f"Estimated cost (including max demand): $ {tcost:.2f}")
 
             st.write("**Bill Breakdown:**")
             st.table(details["blocks"])
